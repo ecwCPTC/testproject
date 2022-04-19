@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<title>evan ward portfolio|gallery</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+</head>
+
+<body>
+
+  <div class="container">
+
+	<div class="rightcol">
+	<div class="head">
+
+    <h1>evan ward portfolio</h1>
+<br><br>
+      <div class="logo">
+      </div>
+     </div>
+    <div class="nav-menu">
+      <ul>
+          <li><a class="section current-nav-link" href="index.html" >Home</a></li>  <li><a class="section" href="gallery.html" >Gallery</a></li>  <li><a class="section" href="resume.html" >Work History</a></li> <li><a class="section" href="music.html" >Music</a></li>
+<li><a class="section" href="form.html" >Confessional</a></li>
+      </ul>
+    </div>
+	</div>
+    <div class="mainblock">
+      <div class="paragraph">
+        <h2>localization matters. period.</h2>
+      </div>
+ <div class="paragraph">
+      <div class="wrapper">
+  <header>
+    <h1>Visual Portfolio of Past Works</h1>
+    <p>Click the thumbnails below to take a closer look at just a few of the localizations I've had the honor of being in charge of!
+(The default pic is from an upcoming Odencat game that's still in development!)</p>
+  </header>
+ 
+  <div class="image-gallery">
+    <aside class="thumbnails">
+      <a href="#" class="selected thumbnail" data-big="images/ml-screenshot.jpg">
+        <div class="thumbnail-image" style="background-image: url(images/ml-thumbnail.jpg)"></div>
+      </a>
+      <a href="#" class="thumbnail" data-big="images/mla-screenshot.jpg">
+        <div class="thumbnail-image" style="background-image: url(images/mla-thumbnail.jpg)"></div>
+      </a>
+      <a href="#" class="thumbnail" data-big="images/bears-screenshot.jpg">
+        <div class="thumbnail-image" style="background-image: url(images/bears-thumbnail.jpg)"></div>
+      </a>
+    </aside>
+ 
+    <main class="primary" style="background-image: url('images/starchild-art.png');"></main>
+  </div>
+</div>
+</div>
+      </div>
+      <div class="paragraph">
+      </div>
+      </div>
+    <div class="footer">
+      <hr>
+      <p>Copyright 2021. No, I do not own the waffle background picture, I just thought it would be kind of cute.</p>
+    </div>
+<script>
+$(".thumbnail").on("click", function () {
+  var clicked = $(this);
+  var newSelection = clicked.data("big");
+  var $img = $(".primary").css("background-image", "url(" + newSelection + ")");
+  clicked.parent().find(".thumbnail").removeClass("selected");
+  clicked.addClass("selected");
+  $(".primary").empty().append($img.hide().fadeIn("slow"));
+});
+</script>
+
+</body>
+
+</html>

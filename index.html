@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<title>evan ward portfolio</title>
+<meta charset="utf-8">
+<style>
+      #tooltip {
+        background: #333;
+        color: white;
+        font-weight: bold;
+        padding: 4px 8px;
+        font-size: 13px;
+        border-radius: 4px;
+        display: none;
+      }
+
+      #tooltip[data-show] {
+        display: block;
+      }
+
+      #arrow,
+      #arrow::before {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: inherit;
+      }
+
+      #arrow {
+        visibility: hidden;
+      }
+
+      #arrow::before {
+        visibility: visible;
+        content: '';
+        transform: rotate(45deg);
+      }
+
+      #tooltip[data-popper-placement^='top'] > #arrow {
+        bottom: -4px;
+      }
+
+      #tooltip[data-popper-placement^='bottom'] > #arrow {
+        top: -4px;
+      }
+
+      #tooltip[data-popper-placement^='left'] > #arrow {
+        right: -4px;
+      }
+
+      #tooltip[data-popper-placement^='right'] > #arrow {
+        left: -4px;
+      }
+      #marquee {
+        position: fixed;
+        overflow: hidden;
+        margin: 0;
+        padding: 7px 0;
+        font-size: 20px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #c80000;
+        color: #ffffff;
+        font-family: Verdana, Geneva, sans-serif;
+      }
+    </style>
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<script src="anime.min.js"></script>
+<script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/dynamic-marquee@2"
+    ></script>
+</head>
+
+<body>
+
+  <div class="container">
+
+	<div class="rightcol">
+	<div class="head">
+
+    <h1>evan ward portfolio</h1>
+<br><br>
+      <div class="logo">
+      </div>
+    </div>
+    <div class="nav-menu">
+      <ul>
+          <li><a class="section current-nav-link" href="index.html" >Home</a></li>  <li><a class="section" href="gallery.html" >Gallery</a></li>  <li><a class="section" href="resume.html" >Work History</a></li> <li><a class="section" href="music.html" >Music</a></li>
+<li><a class="section" href="form.html" >Confessional</a></li>
+      </ul>
+    </div>
+	</div>
+  <div class="mainblock">
+      <div class="paragraph">
+        <h2>localization matters. period.</h2>
+          <div class="captiontext"><img class="banner" src="images/banner.jpg" alt="Wait For Me Yesterday artwork by KUKKA">Above: Illustration from "Wait For Me Yesterday," a novel I translated for Seven Seas Publishing, due out in May 2022.
+</div>
+      </div>
+ <div class="paragraph">
+
+        <div class="text">
+<h1 class="ml11">
+  <span class="text-wrapper">
+    <span class="line line1"></span>
+    <span class="letters">Welcome to my Realm</span>
+  </span>
+</h1>
+Evan Ward is a Japanese-to-English translator, localization director, and copywriter in the games localization industry. This website is meant to serve as a portfolio of his past works, as well as a personal homepage of sorts.<br><br>
+
+He is always interested in taking on new and interesting localization projects to add to his portfolio. For any inquiries or work requests, please send a message by clicking the button below. (Note: availability not guaranteed!)<br><br>
+
+<button id="button" aria-describedby="tooltip">Click here to reach out!</button>
+    <div id="tooltip" role="tooltip">
+      Not accepting work requests at this time! Sorry!
+      <div id="arrow" data-popper-arrow></div>
+    </div>
+<br>
+<br>
+<br>
+If you are an existing client trying to get in touch and I have not responded, please send an email to the address below and I guarantee I will respond within 24 hours regardless of how busy my schedule currently is.
+<br>
+<br>
+<br>
+<p><a class="biglink" href="mailto:enjoievan@gmail.com">enjoievan@gmail.com</a></p>
+</div>
+      </div>
+      <div class="paragraph">
+      </div>
+      </div>
+    <div class="footer">
+      <hr>
+      <p>Copyright 2021. No, I do not own the waffle background picture, I just thought it would be kind of cute.</p>
+    </div>
+</div>
+ <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script>
+      const button = document.querySelector('#button');
+      const tooltip = document.querySelector('#tooltip');
+
+      const popperInstance = Popper.createPopper(button, tooltip, {
+        modifiers: [
+          {
+            name: 'offset',
+            options: {
+              offset: [0, 8],
+            },
+          },
+        ],
+      });
+
+      function show() {
+        // Make the tooltip visible
+        tooltip.setAttribute('data-show', '');
+
+        // Enable the event listeners
+        popperInstance.setOptions((options) => ({
+          ...options,
+          modifiers: [
+            ...options.modifiers,
+            { name: 'eventListeners', enabled: true },
+          ],
+        }));
+
+        // Update its position
+        popperInstance.update();
+      }
+
+      function hide() {
+        // Hide the tooltip
+        tooltip.removeAttribute('data-show');
+
+        // Disable the event listeners
+        popperInstance.setOptions((options) => ({
+          ...options,
+          modifiers: [
+            ...options.modifiers,
+            { name: 'eventListeners', enabled: false },
+          ],
+        }));
+      }
+
+      const showEvents = ['mouseenter', 'focus'];
+      const hideEvents = ['mouseleave', 'blur'];
+
+      showEvents.forEach((event) => {
+        button.addEventListener(event, show);
+      });
+
+      hideEvents.forEach((event) => {
+        button.addEventListener(event, hide);
+      });
+      
+
+var textWrapper = document.querySelector('.ml11 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml11 .line',
+    scaleY: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 700
+  })
+  .add({
+    targets: '.ml11 .line',
+    translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+    easing: "easeOutExpo",
+    duration: 700,
+    delay: 100
+  }).add({
+    targets: '.ml11 .letter',
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=775',
+    delay: (el, i) => 34 * (i+1)
+  }).add({
+    targets: '.ml11',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+    </script>
+  <div id="marquee"></div>
+    <script type="text/javascript">
+      var $marquee = document.getElementById('marquee');
+      var marquee = (window.m = new dynamicMarquee.Marquee($marquee, {
+        rate: -100,
+      }));
+      window.l = dynamicMarquee.loop(
+        marquee,
+        [
+          function () {
+            return 'Enjoy the first paragraphs of some of my recent books!';
+          },
+          function () {
+            return 'EXCERPT FROM THE TUNNEL TO SUMMER, THE EXIT OF GOODBYES: Man, I hate summer.——Such were my thoughts as I sat broiling on the concrete platform, praying my train would soon arrive to grant me a brief reprieve from the midmorning swelter. It was only the beginning of July, and already it felt like stepping into a sauna every time I walked out the front door. The blistering heat and humidity would be miserable enough on their own, but add to that the incessant laughter of cicadas, and it was enough to make my morning commute feel like a sick form of torture. But just when I thought things couldn’t possibly get any worse, a muffled announcement rang out over the station’s lone loudspeaker.';
+          },
+          function () {
+            return 'EXCERPT FROM WAIT FOR ME YESTERDAY: Having anguished and languished till I could anguish no more, I grew fed up with the notion that overanalyzing my anxieties would do me any good, and turned my head toward the sky as if to mark a clean break from this pessimistic spiral. To my surprise, the azure airspace up above was every bit as clear and tranquil as the serenity of mind I craved. A lone black kite painted figure-eights against the firmament, its doleful whinnying call ringing out from on high as it scanned the earth for its next meal. Beside it hung the receding moon, still and placid in the morning sky like a single drop of spilled milk.';
+          },
+          function () {
+            return 'EXCERPT FROM UNANNOUNCED NOVEL: “The human mind is a confluence of language and imagery,” I said, the podium’s microphone carrying my words out across the auditorium. “Now, when I say ‘language,’ I’m of course referring to the words we all use on a daily basis. They’re the fundamental building blocks of logic, and how we express ourselves to one another. Imagery, on the other hand, is a bit trickier to pin down. Perhaps the quickest way to describe it would be to say that it refers to any other type of thought that occupies our minds—things that are too difficult, or abstract, or outright impossible to express in words.”';
+          },
+        ],
+        function () {
+          var $separator = document.createElement('div');
+          $separator.innerHTML = '&nbsp|&nbsp';
+          return $separator;
+        }
+      );
+    </script>
+</body>
+
+</html>
