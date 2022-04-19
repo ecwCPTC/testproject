@@ -1,0 +1,274 @@
+body {
+	font: normal 12px "lucida sans unicode", "lucida sans", verdana, arial;
+	color: #666666;
+	margin: 0px;
+	padding: 0px;
+	background:url('waffle.png');
+}
+
+.container {
+	margin: 0px;
+	padding: 20px 20px 20px 20px;
+	border: 0 ;
+	width: auto;
+}
+
+a,
+a:visited {
+	color: #ba8343;
+	text-decoration: none;
+}
+
+
+a:hover,
+a:visited:hover {
+	color: #ba8343;
+	text-decoration: none;
+	border-bottom: dotted 1px #ba8343;
+
+}
+
+
+.rightcol {
+	width: 194px;
+	float: left;
+}
+
+.head {
+	margin: 0px;
+	border: 0px;
+	background: transparent url('bg-head.gif') no-repeat bottom left;
+}
+
+.head h1 {
+	font: bold 18px "lucida sans";
+	letter-spacing: -1px;
+	color: #4ba2c6;
+	margin: 0px 0px 0px 0px;
+	background: #fff;
+	padding: 20px 20px 3px 20px;
+	border-top: solid 1px #c2bcb3;
+	border-right: solid 3px #c2bcb3;
+	border-bottom: 0;
+	border-left: solid 1px #c2bcb3;
+}
+
+.logo {
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	font-size: 0px;
+	position: relative;
+	left: 21px;
+	top: -23px;
+	background: transparent url('self-icon.png') no-repeat center
+}
+
+.banner {
+	width: 750px;
+	height: 250px;
+}
+
+.nav-menu {
+	padding: 20px;
+	margin: 10px 0px 0px 0px;
+	color: ;
+	text-align: left;
+	background: #fff;
+	border-top: solid 1px #c2bcb3;
+	border-right: solid 3px #c2bcb3;
+	border-bottom: solid 3px #c2bcb3;
+	border-left: solid 1px #c2bcb3;
+}
+
+.nav-menu ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	text-align: left;
+	cursor: default;
+	border-top: solid 1px #e1e0e0 ;
+}
+
+.nav-menu li {
+	margin: 0px;
+	padding: 0px;
+	border-bottom: solid 1px #e1e0e0 ;
+}
+
+.nav-menu a,
+.nav-menu a:visited {
+	margin: 0px;
+	padding: 2px 0px 2px 0px;
+	display: block;
+	width: 100%;
+}
+
+
+.nav-menu a:hover,
+.nav-menu a:visited:hover {
+	color: #000;
+	border: 0;
+	background-color: #f4f4f4 ;
+}
+
+.mainblock {
+	width: 60% !important;
+	width: auto;
+	margin: 0px 0px 0px 10px;
+	padding: 20px 20px 20px 20px;
+	text-align: left;
+	float: left;
+	background: #fff;
+	border-top: solid 1px #c2bcb3;
+	border-right: solid 3px #c2bcb3;
+	border-bottom: solid 3px #c2bcb3;
+	border-left: solid 1px #c2bcb3;
+	overflow: hidden;
+	display: inline;
+}
+
+.mainblock h2 {
+	font: bold 20px "lucida sans";
+	letter-spacing: -1px;
+	color: #4ba2c6;
+	margin: 0px 0px 0px 0px;
+	background: #fff;
+}
+
+.content h2 {
+	font: bold 18px "lucida sans";
+	letter-spacing: -1px;
+	color: #4ba2c6;
+	margin: 0px;
+	padding: 0px 0px 10px 23px;
+}
+
+.paragraph {
+	margin: 0px 0px 20px 0px;
+	padding: 0px 0px 0px 0px;
+	clear: both;
+	line-height: 20px;
+	overflow: hidden;
+}
+
+.text {
+	margin: 0px;
+	padding: 0px 20px 15px 0px;
+	width: auto !important;
+	width: 95%;
+	border-bottom: solid 1px #e1e0e0;
+	overflow: hidden;
+	text-align: center;
+	color: sienna;
+	font-family: helvetica;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.captiontext {
+	margin: 0px;
+	padding: 0px 20px 15px 0px;
+	width: auto !important;
+	width: 95%;
+	border-bottom: solid 1px #e1e0e0;
+	overflow: hidden;
+	text-align: center;
+	color: darkred;
+	font-family: helvetica;
+	font-size: 10px;
+}
+
+.biglink {
+	font-size: 24px;
+	color:steelblue;
+}
+
+.footer {
+	font-size: 10px;
+	margin: 0px 0px 0px 0px;
+	padding: 20px 0px 0px 30px;
+	color: #999;
+	text-align: left;
+	clear: both;
+
+}
+
+
+/* 3rd Party Image Gallery */
+
+.image-gallery {
+  margin: 0 auto;
+  display: table;
+}
+ 
+.primary,
+.thumbnails {
+  display: table-cell;
+}
+ 
+.thumbnails {
+  width: 300px;
+}
+ 
+.primary {
+  width: 600px;
+  height: 400px;
+  background-color: #cccccc;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+ 
+.thumbnail:hover .thumbnail-image, .selected .thumbnail-image {
+  border: 4px solid #FFF;
+}
+ 
+.thumbnail-image {
+  width: 230px;
+  height: 107px;
+  margin: 20px auto;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 4px solid transparent;
+}
+h1{
+  color: #666666;
+}
+p{
+  color: #666666;
+}
+
+.ml11 {
+  font-weight: 700;
+  font-size: 3.5em;
+}
+
+.ml11 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml11 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #fff;
+  transform-origin: 0 50%;
+}
+
+.ml11 .line1 { 
+  top: 0; 
+  left: 0;
+}
+
+.ml11 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
