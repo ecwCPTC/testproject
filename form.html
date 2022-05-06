@@ -5,7 +5,6 @@
 <meta charset="utf-8">
 
 <link rel="stylesheet" type="text/css" href="style/style.css">
-
 </head>
 
 <body>
@@ -35,28 +34,44 @@
       <div class="wrapper">
   <header>
     <h1>Welcome to the Confession Booth.</h1>
-    <p>Tell me your deepest, darkest secrets. I promise I won't tell. Scout's honor.</p>
+    <p>Tell me everything about you. Including your Social Security Number.</p>
   </header>
 <p>
- <form action="action.php" method="post">
-    <label for="name">Full, Legal Name:</label>
-	<br>
-    <input type="text" name="name" id="name">
-	<br>
-     <label for="ssn">Social Security Number:</label>
-	<br>
-    <input type="text" name="ssn" id="ssn">
-	<br>
-    <label for="secret">Deepest, Darkest Secret::</label>
-	<br>
-    <textarea rows="3" cols="30" name="secret" id="secret"></textarea>
-<br>
-<br>
-    <input type="submit" value="Submit">
-    <input type="reset" value="Reset">
-</form>
-</div>
-</div>
+<form id="form" class="form">
+        <div class="field box1 form-group">
+            <label for="name">Your full, legal name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="field box2 form-group">
+            <label for="ssn">Your SSN:</label>
+            <input type="text" id="ssn" name="ssn">
+        </div>
+        <div class="field box3 form-group">
+            <label for="dob">Your date of birth:</label>
+            <input type="text" id="dob" name="dob">
+        </div>
+        <div class="field box4 form-group">
+            <label for="email">Your email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">SUBMIT</button>
+        </div>
+    </form>
+    <table class="table table-striped">
+        <thead>
+            <th>NAME</th>
+            <th>SSN</th>
+            <th>DATE OF BIRTH</th>
+            <th>EMAIL</th>
+        </thead>
+        <tbody class="liste">
+            
+        </tbody>
+    </table>
+<script type="text/javascript" src="main.js"></script> 
+
+
       </div>
       <div class="paragraph">
       </div>
